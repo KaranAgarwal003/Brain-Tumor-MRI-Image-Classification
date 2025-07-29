@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Brain Tumor MRI Classifier</title>
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 800px;
+      width: 100%;
+      color: #fff;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: #00eaff;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    a.button {
+      display: inline-block;
+      background: #03e9f4;
+      color: #000;
+      padding: 12px 25px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    a.button:hover {
+      transform: scale(1.05);
+      background: #0ff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>About the Project</h1>
+    <p>
+      This Brain Tumor MRI Classifier is a deep learning–powered web application designed to analyze MRI scans and classify them into categories such as:
+      <strong>Glioma</strong>, <strong>Meningioma</strong>, <strong>Pituitary</strong>, or <strong>No Tumor</strong>.
+    </p>
+
+    <p>
+      Built with Python, Flask, and a convolutional neural network (CNN), the app provides a simple drag-and-drop interface for uploading MRI scans and getting instant predictions.
+    </p>
+
+    <h2>Key Features</h2>
+    <ul>
+      <li>Modern UI with Glassmorphism design</li>
+      <li>Drag & Drop or manual image upload</li>
+      <li>Real-time preview before prediction</li>
+      <li>Loading spinner & animated prediction badge</li>
+      <li>Responsive and mobile-friendly layout</li>
+    </ul>
+
+    <h2>Tech Stack</h2>
+    <ul>
+      <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+      <li><strong>Backend:</strong> Python Flask</li>
+      <li><strong>Model:</strong> CNN with Keras / TensorFlow</li>
+    </ul>
+
+    <h2>Disclaimer</h2>
+    <p>
+      This project is meant for educational and experimental use only. It is not intended for clinical or diagnostic purposes.
+    </p>
+
+    <p>
+      Developed by <strong>Karan Agarwal</strong> as part of a mini-project for demonstrating AI in medical imaging.
+    </p>
+
+    <div style="text-align: center;">
+      <a href="/" class="button">← Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>

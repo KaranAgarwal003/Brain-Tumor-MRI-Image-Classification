@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 1s ease;
+        }
+
+        .result-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+            text-align: center;
+            color: white;
+            animation: fadeIn 0.8s ease;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .preview-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 12px;
+            border: 3px solid white;
+            transition: transform 0.3s ease;
+        }
+
+        .preview-image:hover {
+            transform: scale(1.03);
+        }
+
+        .prediction-text {
+            font-size: 1.4rem;
+            margin-top: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            color: white;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            animation: fadeInBadge 0.6s ease-in-out;
+        }
+
+        .badge-glioma { background-color: #e67e22; }
+        .badge-meningioma { background-color: #f4b400; }
+        .badge-pituitary { background-color: #8e44ad; }
+        .badge-no { background-color: #16a085; }
+
+        .button-group {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .predict-another-btn,
+        .about-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #03e9f4;
+            border: none;
+            border-radius: 25px;
+            color: black;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .predict-another-btn:hover,
+        .about-btn:hover {
+            background-color: #0ff;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInBadge {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @media (max-width: 600px) {
+            .result-card {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .prediction-text {
+                font-size: 1.2rem;
+            }
+
+            .badge {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="result-card">
+        <h1>Prediction Result</h1>
+        <img src="{{ url_for('static', filename='uploads/' + image_filename) }}" alt="Uploaded Image" class="preview-image">
+        <div class="prediction-text">Predicted Tumor Type:</div>
+        <div class="badge {{ badge_class }}">{{ prediction }}</div>
+
+        <div class="button-group">
+            <a href="/" class="predict-another-btn">🔁 Predict Another</a>
+            <a href="/about" class="about-btn">ℹ️ About Project</a>
+        </div>
+    </div>
+</body>
+</html>
