@@ -1,10 +1,8 @@
 services:
   - type: web
-    name: brain-tumor-mri-classifier
+    name: brain-tumor-classifier
     env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
-    runtime: python
-    region: oregon
-    branch: main
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    build:
+      skipPoetry: true
