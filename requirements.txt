@@ -1,4 +1,4 @@
 Flask==2.3.2
-tensorflow>=2.11,<2.14
+tensorflow==2.11.0
 numpy
-Pillow
+pillow
