@@ -43,9 +43,11 @@ Used on training set to prevent overfitting:
 - Validation Accuracy: ~90%
 - Loss and accuracy curves indicate stable training with minimal overfitting.
 
-![Accuracy & Loss]
 
-![Input](Screenshot 2025-07-29 084415.png)
+## 📈 Accuracy & Loss Curves
+
+![Model Accuracy and Loss](Screenshot%202025-07-29%20084415.png)
+
 
 ---
 
