@@ -45,7 +45,7 @@ Used on training set to prevent overfitting:
 
 ![Accuracy & Loss]
 
-![Alt text](Screenshot 2025-07-29 084415.png)
+![Input](Screenshot 2025-07-29 084415.png)
 
 ---
 
