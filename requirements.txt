@@ -1,5 +1,9 @@
 Flask
 tensorflow
 numpy
-pillow
+Pillow
+werkzeug # Though usually a Flask dependency, good to confirm
 gunicorn
+gevent
+# If you implement the model download logic, also add:
+# requests
