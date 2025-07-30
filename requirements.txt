@@ -1,9 +1,10 @@
 Flask
-tensorflow
+tensorflow==2.18.0
 numpy
 Pillow
 werkzeug # Though usually a Flask dependency, good to confirm
 gunicorn
 gevent
+keras<3.0.0
 # If you implement the model download logic, also add:
 # requests
